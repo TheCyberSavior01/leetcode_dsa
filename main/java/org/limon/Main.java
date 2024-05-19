@@ -1,11 +1,17 @@
 package org.limon;
 
+import org.limon.Array.ConcatOfArray;
 import org.limon.Array.RemoveDuplicates;
 import org.limon.Array.RemoveElement;
 
 public class Main {
     public static void main(String[] args) {
-        RemoveElement removeElement = new RemoveElement();
-        System.out.println(removeElement.removeElement(new int[]{0,1,2,2,3,0,4,2}, 2));
+        ConcatOfArray concatOfArray = new ConcatOfArray();
+        int[] arr1 = new int[] {1,2,1};
+        int[] arr2 = new int[] {1,3,2,1};
+        int [] res = concatOfArray.getConcatenation(arr2);
+        for (int i = 0; i < res.length; i++) {
+            System.out.println(res[i]);
+        }
     }
 }
