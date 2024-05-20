@@ -1,23 +1,27 @@
 package org.limon.Stack;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+import java.util.Stack;
 
 public class ValidParentheses {
     public boolean isValid(String s) {
-        List<Character> stack = new ArrayList<>();
+        Stack<Character> stack = new Stack<>();
         HashMap<Character, Character> map = new HashMap();
         map.put('}', '{');
         map.put(')', '(');
         map.put(']', '[');
 
+        // [(])
+        // [(]
+
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (map.containsKey(c)) {
-                stack.remove(map.get(c));
+                if (map.get(c).equals(stack.peek())) {
+                    stack.pop();
+                }
             } else {
-                stack.add(c);
+                stack.push(c);
             }
         }
 
