@@ -11,14 +11,13 @@ public class ValidParentheses {
         map.put(')', '(');
         map.put(']', '[');
 
-        // [(])
-        // [(]
-
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (map.containsKey(c)) {
-                if (map.get(c).equals(stack.peek())) {
+                if (!stack.isEmpty() && map.get(c).equals(stack.peek())) {
                     stack.pop();
+                }else {
+                    return false;
                 }
             } else {
                 stack.push(c);
