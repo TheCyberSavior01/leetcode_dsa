@@ -3,11 +3,11 @@ package org.limon.LinkedList;
 public class MergeTwoSotredLinkedList {
     public class ListNode {
         public int val;
-        public org.limon.LinkedList.ListNode next;
+        ListNode next;
 
         public ListNode() {}
         public ListNode(int val) { this.val = val; }
-        public ListNode(int val, org.limon.LinkedList.ListNode next) { this.val = val; this.next = next; }
+        public ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
