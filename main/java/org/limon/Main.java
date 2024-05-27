@@ -1,19 +1,14 @@
 package org.limon;
 
-import org.limon.Array.EvenComesFirst;
-import org.limon.LinkedList.BrowserHistory;
-import org.limon.LinkedList.DesignLinkedList;
-import org.limon.LinkedList.MergeTwoSotredLinkedList;
-import org.limon.Queue.ImplementStackUsingTwoQueues;
-import org.limon.Queue.StudentsUnableToEatLunch;
-import org.limon.Sorting.InsertionSort;
+
+import org.limon.Sorting.MergeSort;
 
 public class Main {
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 2, 3, 4, 5, 6};
-        EvenComesFirst evenComesFirst = new EvenComesFirst();
-        int[] res = evenComesFirst.evenComesFirst(nums);
-        for(int i: res) {
+        int[] nums = new int[]{2,3,1, 5, 3, 6};
+        MergeSort mergeSort = new MergeSort();
+        int[] output = mergeSort.sortArray(nums);
+        for (int i: output) {
             System.out.println(i);
         }
     }
