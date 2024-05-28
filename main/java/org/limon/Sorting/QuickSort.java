@@ -8,10 +8,6 @@ public class QuickSort {
         int j = start;
         int pivot = arr[end];
 
-        // 2, 4, 6, 1, 3
-        // 2, 1, 6, 4, 3
-        // 2, 1, 3, 4, 6
-
         for (int i = j; i < end; i++) {
             if (arr[i] <= pivot) {
                 int temp = arr[i];
