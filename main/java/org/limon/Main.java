@@ -12,7 +12,7 @@ public class Main {
         BinarySearch binarySearch = new BinarySearch();
         int[] arr = new int[] {2, 3, 6, 6, 11, 13};
         int res = binarySearch.binarySearch(arr, 14);
-        System.out.println(res);
+        System.out.println(res)
 
     }
 
