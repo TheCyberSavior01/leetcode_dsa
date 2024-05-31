@@ -3,6 +3,8 @@ package org.limon;
 
 import org.limon.Searching.BinarySearch;
 
+import java.util.HashMap;
+
 public class Main {
     public static void main(String[] args) {
         BinarySearch binarySearch = new BinarySearch();
