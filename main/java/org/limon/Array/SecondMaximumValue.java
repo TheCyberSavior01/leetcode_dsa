@@ -12,9 +12,18 @@ public class SecondMaximumValue {
                 min = nums[i];
             }
         }
-        System.out.println(max);
-        System.out.println(min);
-        return max;
+
+        int distance = max - min;
+        int secondMax = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (max - nums[i] < distance && nums[i] != max) {
+                distance = max - nums[i];
+                secondMax = nums[i];
+            }
+        }
+
+        return secondMax;
 
     }
 }
