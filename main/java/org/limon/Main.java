@@ -1,15 +1,16 @@
 package org.limon;
 
 
+import org.limon.Array.SecondMaximumValue;
 import org.limon.Searching.BinarySearch;
 
 import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-        BinarySearch binarySearch = new BinarySearch();
-        int[] arr = new int[] {2, 3, 6, 6, 11, 13};
-        int res = binarySearch.binarySearch(arr, 14);
+        int[] arr = new int[] {2, 3, 6, 6, 11, 13, 1};
+        SecondMaximumValue secondMaximumValue = new SecondMaximumValue();
+        int res = secondMaximumValue.secondMaximumValue(arr);
         System.out.println(res);
 
     }
