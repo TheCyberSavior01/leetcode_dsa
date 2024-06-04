@@ -3,19 +3,19 @@ package org.limon.SlidingWindow;
 public class BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
         int maxProfit = 0;
-        int buy = 0;
-        int sell = 1;
+        int left = 0;
+        int right = 1;
 
-        while (sell < prices.length) {
-            if (prices[buy] < prices[sell]) {
-                int profit = prices[sell] - prices[buy];
+        while (right < prices.length) {
+            if (prices[left] < prices[right]) {
+                int profit = prices[right] - prices[left];
                 if (profit > maxProfit) {
                     maxProfit = profit;
                 }
-                sell++;
+                right++;
             } else {
-                buy = sell;
-                sell++;
+                left = right;
+                right++;
             }
         }
 
