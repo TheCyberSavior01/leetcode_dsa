@@ -1,6 +1,15 @@
 package org.limon.LinkedList;
 
 public class MiddleOfLinkedList {
+    private class ListNode {
+        int val;
+        DesignLinkedList.ListNode next;
+        DesignLinkedList.ListNode prev;
+        ListNode (int val) {
+            this.val = val;
+        }
+    }
+
     public ListNode middleNode(ListNode head) {
         ListNode curr = head;
         int len = 0;
