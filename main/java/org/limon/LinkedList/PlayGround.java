@@ -12,6 +12,6 @@ public class PlayGround {
         // len = 4 - 1, n = 2, (4-2+1) = 3
         NthNodeFromEnd nthNodeFromEnd = new NthNodeFromEnd();
         //nthNodeFromEnd.printLinkedList(head);
-        System.out.println(nthNodeFromEnd.nthFromEnd(head, 2));
+        System.out.println(nthNodeFromEnd.nthFromEndTP(head, 2));
     }
 }

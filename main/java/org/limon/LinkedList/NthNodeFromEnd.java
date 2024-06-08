@@ -10,6 +10,24 @@ public class NthNodeFromEnd {
         }
     }
 
+    // Two pointer (fast and slow pointers)
+    public ListNode nthFromEndTP(ListNode head, int n) {
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while (n > 0) {
+            fast = fast.next;
+            n--;
+        }
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            int i = 0;
+            fast = fast.next;
+        }
+        return slow;
+    }
+
     public ListNode nthFromEnd(ListNode head, int n) {
         int len = findLength(head) - 1;
         ListNode curr = head;
