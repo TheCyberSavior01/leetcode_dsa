@@ -1,29 +1,37 @@
 package org.limon.LinkedList;
 
 public class NthNodeFromEnd {
-    class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) {
+        public ListNode(int x) {
             val = x;
             next = null;
         }
     }
 
-    public ListNode reverse(ListNode head) {
-        if (head == null || head.next == null) return head;
-
+    public ListNode nthFromEnd(ListNode head, int n) {
+        int len = findLength(head) - 1;
         ListNode curr = head;
-        ListNode prev = null;
+        int i = 0;
 
-        while (curr != null) {
-            ListNode next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
+        while (i < (len - n + 1)) {
+            curr = curr.next;
+            i++;
         }
 
-        return head;
+        return curr;
+    }
+
+    public int findLength(ListNode head) {
+        int len = 0;
+
+        while (head != null) {
+            head = head.next;
+            len++;
+        }
+
+        return len;
     }
 
     public void printLinkedList (ListNode head) {
