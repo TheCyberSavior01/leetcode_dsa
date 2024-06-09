@@ -3,12 +3,16 @@ package org.limon.Queue;
 import java.util.Stack;
 
 public class QueueUsingStack {
-    Stack<Integer> stack1;
-    Stack<Integer> stack2;
+    private Stack<Integer> stack1;
+    private Stack<Integer> stack2;
 
     public QueueUsingStack() {
         this.stack1 = new Stack<>();
         this.stack2 = new Stack<>();
+    }
+
+    public int peek() {
+        return stack1.peek();
     }
 
     public void enQueue(int value) {
