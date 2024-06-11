@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class Graph {
     private int vertices;
-    private LinkedList<Integer> adjacencyList[];
+    LinkedList<Integer> adjacencyList[];
 
     // constructor
     public Graph(int vertices) {
@@ -21,5 +21,8 @@ public class Graph {
         adjacencyList[source].addLast(destination);
     }
 
+    public int getVertices() {
+        return vertices;
+    }
 
 }
