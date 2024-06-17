@@ -42,11 +42,15 @@ public class BasicQueue {
         size++;
     }
 
-    public int dequeue() {
+    public void dequeue() {
         if (size == 0) {
             throw new NoSuchElementException();
         } else {
-
+            head = head.next;
+            size--;
+            if (head == null) {
+                tail = null;
+            }
         }
     }
 
