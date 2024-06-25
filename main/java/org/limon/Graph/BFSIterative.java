@@ -1,12 +1,9 @@
 package org.limon.Graph;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class BFSIterative {
-    public void BFS(HashMap<String, List<String>> graph, String source) {
+    public void BFS(Map<String, List<String>> graph, String source) {
         Queue<String> queue = new LinkedList<>();
         queue.offer(source);
         while (!queue.isEmpty()) {

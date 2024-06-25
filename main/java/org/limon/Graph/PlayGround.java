@@ -15,8 +15,11 @@ public class PlayGround {
                 "e", List.of()
         );
 
-        DFSIterative dfsIterative = new DFSIterative();
-        dfsIterative.dfsGraph(graph, "a");
+//        DFSIterative dfsIterative = new DFSIterative();
+//        dfsIterative.dfsGraph(graph, "a");
+
+        BFSIterative bfsIterative = new BFSIterative();
+        bfsIterative.BFS(graph, "a");
 
     }
 }
